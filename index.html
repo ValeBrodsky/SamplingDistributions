@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribución Normal Truncada</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluimos las bibliotecas necesarias para Plotly, jStat, y los sliders -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="content">
+    <div>
+        <h2>Ejemplo 8.2 - pag.311-314</h2>
+        <p>Supongamos que en la población de adultos la media de horas diarias de sueño es de 6,5 hs (μ = 6,5) con varianza de 9hs al cuadrado (σ = 9).<br> Si eligiéramos al azar muestras de 200 personas (n=200) y registráramos el número promedio de horas de sueño en cada muestra,<br> encontraríamos que la distribución de esas horas promedio sería como la siguiente: </p>
+    </div>
+
+    <div id="graphs-container">
+        <div id="grafico-muestra" class="graph"></div>
+        <div id="grafico-distribucion" class="graph"></div>
+    </div>
+
+    <div class="slider-container">
+        <div>Tamaño de Muestra</div>
+        <div id="slider-tamano-muestra"></div>
+    </div>
+    
+    <div class="slider-container">
+        <div>Media Muestral</div>
+        <div id="slider-media-muestral"></div>
+    </div>
+
+    <div id="probabilidad-texto" class="output-text"></div>
+    <div id="z-score-texto" class="output-text"></div>
+
+    <div>
+        <p>A modo de ejemplo, observen cuál es la probabilidad de encontrar muestras de 200 personas cuyos promedios de horas de sueño superen las 7 horas. La probabilidad de superar este valor P(z>2,38) es de 0,009. La lectura de este resultado es que solo el 0,9% de las muestras de tamaño 200 darán media muestral mayor a 7hs. </p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
